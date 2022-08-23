@@ -1,18 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+    android:layout_margin="0dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtFecha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple_700"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="Lunes 27 de Septiembre de 2021"/>
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione 4 Imagenes:"></TextView>
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:rowCount="2"
+                    android:columnCount="2">
+                    <ImageView
+                        android:id="@+id/imgFoto1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@android:drawable/ic_menu_crop"
+                        android:padding="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/imgFoto2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:padding="5dp"
+                        android:src="@android:drawable/ic_menu_crop"/>
+                    <ImageView
+                        android:id="@+id/imgFoto3"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@android:drawable/ic_menu_crop"
+                        android:padding="5dp"
+                        />
+                    <ImageView
+                        android:id="@+id/imgFoto4"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@android:drawable/ic_menu_crop"
+                        android:padding="5dp"/>
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripcion de las Imagenes:"></TextView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    ></EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Guardar" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
