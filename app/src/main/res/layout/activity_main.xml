@@ -75,11 +75,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Descripcion de las Imagenes:"></TextView>
+
                 <EditText
+                    android:id="@+id/id_descripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="false"
-                    ></EditText>
+                    android:singleLine="false"></EditText>
             </LinearLayout>
 
             <Button
